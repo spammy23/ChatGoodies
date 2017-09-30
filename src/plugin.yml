@@ -1,0 +1,40 @@
+name: ChatGoodies
+author: GitGideon
+main: io.github.gitgideon.ChatGoodies.ChatGoodies
+version: 0.1
+commands:
+  cc:
+    description: Clear the chat
+    usage: /cc [player]
+  gmute:
+    description: Mute the chat
+    usage: /gmute
+permission:
+  chatgoodies.clearchat.all:
+    description: To clear everyone's chat
+  chatgoodies.clearchat.self:
+    description: To clear own chat
+  chatgoodies.clearchat.others:
+    description: To clear specific other players chat
+  chatgoodies.clearchat.exclude:
+    description: Blocks an incoming clearchat from a player with chatgoodies.clearchat.others
+  chatgoodies.clearchat.force:
+    description: Overrides chatgoodies.clearchat.exclude
+  chatgoodies.globalmute.set:
+    description: Allows to enable or disable global mute
+  chatgoodies.globalmute.talk:
+    description: Allows to still talk during mute
+  chatgoodies.globalmute.read:
+    description: Allows to read player's attempted messages during globalmute
+  chatgoodies.msgalias:
+    description: Allows to use aliasses in messages
+  chatgoodies.cmdalias:
+    description: Allows to use aliasses in commands
+  chatgoodies.mention:
+    description: Allows a player to mention players
+  chatgoodies.replacedot:
+    description: When a player has this permission it removes the dot when a message starts with a dot
+  chatgoodies.staffchat.send:
+    description: Allows to send a staffchat message
+  chatgoodies.staffchat.receive:
+    description: Allows to receive staffchat messages

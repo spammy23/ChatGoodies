@@ -1,0 +1,29 @@
+replacedot: true
+mention: true
+mentioned-sound: true
+cmdalias: true
+msgalias: true
+msg-mention: "&b%player% &6has mentioned you!"
+cmdaliasses:
+  /al: /alias
+msgaliasses:
+  lol: laughing out loud
+clearchat:
+  enabled: true
+  msg_global: "&c%player% &7has cleared the chat!"
+  msg_self: "&7You have successfully cleared your own chat!"
+  msg_player: "&c%player% &7has cleared your chat!"
+  msg_playernotfound: "&c%player% not found!"
+globalmute:
+  enabled: true
+  msg_announcemute: "&c%player% &7has muted the chat!"
+  msg_announceunmute: "&c%player% &7has unmuted the chat!"
+  msg_notalk: "&cYou're not allowed to talk right now!"
+  msg_format: "&b%player%&7 -> &e%msg%"
+  playermsg_mute: "&2You have just muted the chat! Type /gmute again to unmute"
+  playermsg_unmute: "&2You have just unmuted the chat."
+staffchat:
+  enabled: true
+  command: "#"
+  msg_format: "&b%player% &7-> &d&l%msg%"
+colorformatting: false
