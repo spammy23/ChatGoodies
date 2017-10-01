@@ -1,6 +1,6 @@
 name: chatgoodies
 author: GitGideon
-main: io.github.gitgideon.chatgoodies.chatgoodies
+main: io.github.gitgideon.chatgoodies.ChatGoodies
 version: 0.1
 commands:
   cc:
