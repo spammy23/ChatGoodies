@@ -1,5 +1,6 @@
-package io.github.gitgideon.ChatGoodies;
+package io.github.gitgideon.chatgoodies.listener;
 
+import io.github.gitgideon.chatgoodies.ChatGoodies;
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,15 +16,15 @@ public class ChatGoodiesStaffChatListener implements Listener {
     }
 
     @EventHandler
-    public void onStaffChat(AsyncPlayerChatEvent e) {
-        if (!e.getMessage().startsWith(main.getConfig().getString("staffchat.command"))) return;
-        if (!e.getPlayer().hasPermission("chatgoodies.staffchat.send")) return;
+    public void onStaffChat(AsyncPlayerChatEvent event) {
+        if (!event.getMessage().startsWith(main.getConfig().getString("staffchat.command"))) return;
+        if (!event.getPlayer().hasPermission("chatgoodies.staffchat.send")) return;
         main.getServer().getOnlinePlayers().stream().filter(p -> p.hasPermission("chatgoodies.staffchat.receive"))
                 .forEach(p -> p.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig()
                         .getString("staffchat.msg_format"))
-                        .replace("%player%", e.getPlayer().getName())
-                        .replace("%msg%", e.getMessage())));
-        e.setCancelled(true);
+                        .replace("%player%", event.getPlayer().getName())
+                        .replace("%msg%", event.getMessage())));
+        event.setCancelled(true);
     }
 
 }
